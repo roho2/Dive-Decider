@@ -11,24 +11,35 @@
 # Spent about 1 hour so far
 import requests
 import arrow
+import json
+import pprint
+
+start = arrow.now().floor('day')
+end = arrow.now().shift(days=1).floor('day')
+
+url = 'https://api.stormglass.io/v2/tide/extremes/point'
+params = {
+            'lat': 26.2055,
+            'lng': -80.0851,
+            'start': start.to('UTC').timestamp(),  # Convert to UTC timestamp
+            'end': end.to('UTC').timestamp(),  # Convert to UTC timestamp
+        }
+headers = {
+            'Authorization': 'f23856c2-543b-11ee-a654-0242ac130002-f2385780-543b-11ee-a654-0242ac130002'
+        }
 
 if __name__ == "__main__":
     start = arrow.now().floor('day')
     end = arrow.now().shift(days=1).floor('day')
 
-    response = requests.get(
-        'https://api.stormglass.io/v2/tide/extremes/point',
-        params={
-            'lat': 26.2055,
-            'lng': -80.0851,
-            'start': start.to('UTC').timestamp(),  # Convert to UTC timestamp
-            'end': end.to('UTC').timestamp(),  # Convert to UTC timestamp
-        },
-        headers={
-            'Authorization': 'f23856c2-543b-11ee-a654-0242ac130002-f2385780-543b-11ee-a654-0242ac130002'
-        }
-    )
-    json_data = response.json()
-    for i in json_data:
-        print(i, ":", json_data[i])
+    response = requests.get(url, params, headers)
+    if response.status_code == 200:
+        json_data = json.loads(response.text)
+        pprint(json_data)
+    else:
+        print(f"Error:  {response.status_code}")  # Formatted string literal. contain replacement filed
+
+
+    # for i in json_data:
+    #     print(i, ":", json_data[i])
 
