@@ -9,18 +9,28 @@
 
 # If I were to do an app, I would probably do it all with just AWS and Python Lambdas lol
 # Run a SUPER light app
-# You can use API gateway to handle the API calls and routing, DynamoDB for your database, and just use Python Lambdas to handle your backend service code
+# You can use API gateway to handle the API calls and routing, DynamoDB for your database,
+# and just use Python Lambdas to handle your backend service code
 
 # Start: 9/15/2023
 # Spent about 3 hours so far
 
+from flask import Flask
 import requests
+
 import arrow
 import json
 import pprint
 
 start = arrow.now().floor('day')
 end = arrow.now().ceil('day')
+
+# app = Flask(__name__)
+#
+# @app.route('/')
+# def hello():
+#
+# app.run()
 
 if __name__ == "__main__":
 
