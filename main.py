@@ -13,7 +13,8 @@
 # and just use Python Lambdas to handle your backend service code
 
 # Start: 9/15/2023
-# Spent about 3 hours so far
+# Spent about 4 hours so far
+# Landing page image: Image by joakant from Pixabay
 
 from flask import Flask
 import requests
