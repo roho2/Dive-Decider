@@ -16,6 +16,9 @@
 # Spent about 4 hours so far
 # Landing page image: Image by joakant from Pixabay
 
+# Search for best dive conditions and create a list of variables we NEED to get, and what
+# nominal values are for those variables (etc. wave height: 1-2ft (not actually nominal idk)).
+
 from flask import Flask
 import requests
 
