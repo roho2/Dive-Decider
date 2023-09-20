@@ -1,0 +1,88 @@
+.image {
+  top: 0px;
+  left: 0px;
+  width: 1440px;
+  height: 900px;
+  border-radius: 2px;
+  background-image: url(./image.png);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Styling for background card for input area */
+.card {
+  top: 63px;
+  left: 429px;
+  width: 600px;
+  height: 785px;
+  background-color: #f0f0f0;
+  border-radius: 2px;
+}
+
+
+/* Styling for Dive Decider name, need to change from just text*/
+.text {
+  color: #030303;
+  font-size: 48px;
+  font-family: "Aleo";
+  font-weight: 700;
+  line-height: 56px;
+  text-align: center;
+}
+
+/* Styling for "welcome to dive decider" text */
+.text {
+  color: #030303;
+  font-size: 14px;
+  font-family: "Aleo";
+  line-height: 18px;
+  text-align: center;
+}
+
+/* Styling for text entry "search for dive site" box */
+.input {
+  top: 369px;
+  left: 492px;
+  width: 456px;
+  height: 48px;
+  padding: 0px 8px;
+  border: 1px solid #7a7a7a;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: #ffffff;
+  color: #7f7f7f;
+  font-size: 14px;
+  font-family: "Aleo";
+  font-weight: 500;
+  line-height: 18px;
+  outline: none;
+}
+
+/* Styling for Search button */
+.button {
+  top: 442px;
+  left: 610px;
+  width: 220px;
+  height: 48px;
+  padding: 0px 8px;
+  border: 0;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: #0997bf;
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Aleo";
+  font-weight: 700;
+  line-height: 22px;
+  outline: none;
+}
+
+/* Styling for "created by robert hollinger" tag */
+.text {
+  color: #7a7a7a;
+  font-size: 14px;
+  font-family: "Aleo";
+  font-weight: 400;
+  line-height: 17px;
+}
