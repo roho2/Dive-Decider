@@ -1,9 +1,18 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Dive Decider</title>
+    <meta charset="UTF-8">
+    <title>Dive Decider</title>
 </head>
-
+    <form action="/weather" method="post">
+        <label for="location">Select a dive site:</label>
+        <select name="location" id="location">
+            <option value="site1">Dive Site 1</option>
+            <option value="site2">Dive Site 2</option>
+            <!-- Add more dive sites as needed -->
+        </select>
+        <input type="submit" value="Submit">
+    </form>
 <body>
 <!-- Comment -->
 </body>
