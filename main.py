@@ -2,18 +2,11 @@
 # I want to create a program that allows you to choose a dive site and get back a response that says
 # If it is a good day to dive or not based on data from stormglass.io. It will provide surf conditions.
 
-# Tech ideas, Django for web. MySQL or PostgreSQL to store data (dive sites?, even users info (fav dive sites?)).
-# Django ORM help database operations by allowing you to interact using python objects
 # Host on AWS or Heroku?
 # OAuth or JWT for authentication. pytest to test code?
 
-# If I were to do an app, I would probably do it all with just AWS and Python Lambdas lol
-# Run a SUPER light app
-# You can use API gateway to handle the API calls and routing, DynamoDB for your database,
-# and just use Python Lambdas to handle your backend service code
-
 # Start: 9/15/2023
-# Spent about 4 hours so far
+# Spent about 5 hours so far
 # Landing page image: Image by joakant from Pixabay
 
 # Search for best dive conditions and create a list of variables we NEED to get, and what
@@ -39,8 +32,6 @@ def weather():
     selected_location = request.form.get('location')  # Is this the DOM? I forgot
     # Make API call here to gather info using location info
     return render_template('weather.html', weather_info=selected_location)
-
-    # return redirect(url_for('weather'))
 
 
 start = arrow.now().floor('day')
