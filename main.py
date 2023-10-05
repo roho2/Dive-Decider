@@ -39,6 +39,10 @@ if __name__ == "__main__":
 
     app.run()
 
+    # Most likely I want to create a separate function/object to initialize and call the API.
+    # Maybe return an API Object that contains all that was returned?
+    # Definitely want to clean it up more than below
+
     # response = requests.get(
     #     'https://api.stormglass.io/v2/weather/point',
     #     params={
